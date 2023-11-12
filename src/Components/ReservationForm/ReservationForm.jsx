@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { MdMyLocation, MdLocationPin, MdGroup, MdCalendarMonth } from "react-icons/md";
 import { useReservations } from '../../Hooks/ReservationsContext/useReservations';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 function ReservationForm() {
     const [formData, setFormData] = useState({
