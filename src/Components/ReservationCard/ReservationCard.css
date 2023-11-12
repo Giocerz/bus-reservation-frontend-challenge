@@ -1,0 +1,37 @@
+.reservationCard {
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(203, 203, 203);
+    color: black;
+    transition: all .5s ease;
+}
+
+.reservationCard-header h3, .reservationCard-header p{
+    margin: 0;
+}
+
+.reservationCard:hover {
+    box-shadow: 2px 2px 2px 2px rgb(165, 165, 165);
+}
+
+.reservationCard a {
+    text-decoration: none;
+}
+
+.reservationCard-aside {
+    display: flex;
+    align-items: center;
+}
+
+.reservationCard-aside span {
+    height: 100%;
+}
+
+.detailsIcon {
+    font-size: 50px;
+}
