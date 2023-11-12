@@ -3,6 +3,6 @@ export function saveToStorage(reservations) {
     window.localStorage.setItem('reservations', JSON.stringify(reservations));
 }
 
-export const resetGameStorage = () => {
+export const clearStorage = () => {
     window.localStorage.removeItem('reservations');
 }

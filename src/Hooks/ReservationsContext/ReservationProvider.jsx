@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ReservationContext } from "./Const";
-import { saveToStorage } from "../../logic/storage";
+import { clearStorage, saveToStorage } from "../../logic/storage";
 
 function ReservationProvider({ children }) {
     const [reservations, setReservations] = useState([]);
@@ -27,6 +27,11 @@ function ReservationProvider({ children }) {
 
     const deleteReservation = (item) => {
         const updateReservations = reservations.filter((reservation) => reservation.id !== item.id);
+        if(updateReservations.length !== 0) {
+            saveToStorage(updateReservations);
+        } else {
+            clearStorage();
+        }
         setReservations(updateReservations);
     }
 
